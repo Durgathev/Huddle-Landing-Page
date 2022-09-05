@@ -10,24 +10,26 @@
   --violet:hsl(257, 40%, 49%);
   --soft_magenta:hsl(300, 69%, 71%);
 }
-.container{
+body{
   max-width: 1440px;
   min-height: 100vh;
+  max-height: 100%;
   background: url(images/bg-desktop.svg) no-repeat var(--violet);
   background-size:contain;
-  background-attachment: fixed;
+  background-attachment:fixed;
 }
 header{
   padding-left:50px;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 header img{
   width:175px;
 }
 main{
   display:flex;
+  justify-content: center;
+  align-items: center;
   padding:40px 50px;
-
 }
 main .illustrator{
   width:100%;
@@ -46,7 +48,6 @@ main h1{
   font-size: 45px;
   font-family: Poppins;
   cursor:default;
-
 }
 main .para p{
   font-family: "Open Sans";
@@ -63,15 +64,14 @@ main .para .register{
   width: 30%;
   border-radius: 20px;
   text-align: center;
+  border:none;
 }
-main .para .register  a{
+main .para .register{
    color:var(--violet);
 }
 main .para .register:hover{
   background-color: var(--soft_magenta);
-}
-main .para .register:hover a{
-  color: white;
+  color:white;
 }
 footer{
   margin-right: 20px;
@@ -103,7 +103,7 @@ footer .attribution a{
 
 @media (max-width:720px) {
 
-  main{
+  main .container{
     flex-direction: column;
     background: url(images/bg-mobile.svg) no-repeat var(--violet);
   }
